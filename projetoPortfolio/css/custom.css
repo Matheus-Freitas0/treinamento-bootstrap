@@ -1,86 +1,125 @@
-html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: url("../img/fundo.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+header .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar-toggler {
+  border: none;
+}
+header .container {
+  z-index: 2;
+}
+
+#textoPrinc {
+  text-shadow: 10px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#subTextoPrinc {
+  text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#sobre img {
+  border: 3px solid #fff;
+}
+
+#projetos .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projetos .card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+#projetos .card-body {
+  flex: 1;
+}
+
+#projetos .card-title,
+#projetos .card-text {
+  margin-bottom: 1rem;
+}
+
+#projetos .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#contato .form-control {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+@media (max-width: 767px) {
   header {
-    background: url("../img/fundo.jpg") no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    position: relative;
+    height: 80vh;
+    text-align: center;
   }
-  
-  header .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  header .container {
-    z-index: 2;
-  }
-  
+
   #textoPrinc {
-    text-shadow: 10px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
   }
-  
+
   #subTextoPrinc {
-    text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
   }
-  
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  
+
   #sobre img {
-    border: 3px solid #fff;
+    width: 100%;
+    height: auto;
   }
-  
-  #projetos .card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
+
   #projetos .card-img-top {
-    object-fit: cover;
-    height: 200px;
+    height: 150px;
   }
-  
-  #projetos .card-body {
-    flex: 1;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    height: 90vh;
   }
-  
-  #projetos .card-title, #projetos .card-text {
-    margin-bottom: 1rem;
+
+  #textoPrinc {
+    font-size: 3rem;
   }
-  
-  #projetos .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+  #subTextoPrinc {
+    font-size: 1.5rem;
   }
-  
-  #contato .form-control {
-    margin-bottom: 1rem;
-    padding: 0.75rem;
+
+  #projetos .card-img-top {
+    height: 180px;
   }
-  
+}
