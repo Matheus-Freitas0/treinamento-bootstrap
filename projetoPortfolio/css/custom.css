@@ -34,3 +34,11 @@ header::before {
 #sobre img {
     border: 5px solid #fff;
 }
+#projetos .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+   }
+   #projetos .card:hover {
+    transform: scale(1.05);
+   }
+   
