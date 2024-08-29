@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
 }
 header {
-  background: url("../img/perfil.jpg") no-repeat center center;
+  background: url("../img/fundo.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -33,4 +33,4 @@ header::before {
 }
 #sobre img {
     border: 5px solid #fff;
-   }
+}
