@@ -21,9 +21,11 @@ header .navbar {
   width: 100%;
   z-index: 1000;
 }
+
 .navbar-toggler {
   border: none;
 }
+
 header .container {
   z-index: 2;
 }
@@ -78,10 +80,48 @@ header::before {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-#contato .form-control {
-  margin-bottom: 1rem;
-  padding: 0.75rem;
+#contato {
+  padding: 60px 0;
+  background: linear-gradient(120deg, #f0f9ff, #c2e9fb);
 }
+
+#contato h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+#contato .form-control {
+  border-radius: 25px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato .form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 3px 12px rgba(40, 167, 69, 0.2);
+}
+
+#contato button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 15px rgba(33, 136, 56, 0.3);
+}
+
+/* Layout Responsivo */
 @media (max-width: 767px) {
   header {
     height: 80vh;
@@ -103,6 +143,14 @@ header::before {
 
   #projetos .card-img-top {
     height: 150px;
+  }
+
+  #contato h2 {
+    font-size: 2rem;
+  }
+
+  #contato button {
+    width: 100%;
   }
 }
 
