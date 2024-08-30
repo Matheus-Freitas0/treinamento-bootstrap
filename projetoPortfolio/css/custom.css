@@ -169,8 +169,11 @@ header::before {
   background-color: #218838;
   box-shadow: 0 4px 15px rgba(33, 136, 56, 0.3);
 }
+.social-icons a:hover {
+  color: #ffcc00; 
+  transition: color 0.3s ease;
+}
 
-/* Layout Responsivo */
 @media (max-width: 767px) {
   header {
     height: 80vh;
