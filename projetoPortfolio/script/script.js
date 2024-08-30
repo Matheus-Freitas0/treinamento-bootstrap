@@ -9,4 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-});
+})
+window.onscroll = function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.pageYOffset > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
