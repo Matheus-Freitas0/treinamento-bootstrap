@@ -21,15 +21,17 @@ header .navbar {
   width: 100%;
   z-index: 1000;
 }
+
 .navbar-toggler {
   border: none;
 }
+
 header .container {
   z-index: 2;
 }
 
 #textoPrinc {
-  text-shadow: 10px 2px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 #subTextoPrinc {
@@ -78,10 +80,100 @@ header::before {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-#contato .form-control {
-  margin-bottom: 1rem;
-  padding: 0.75rem;
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #f0a500;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f0a500;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.8%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar.navbar-dark.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#contato {
+  padding: 60px 0;
+  background: linear-gradient(120deg, #f0f9ff, #c2e9fb);
+}
+
+#contato h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+#contato .form-control {
+  border-radius: 25px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato .form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 3px 12px rgba(40, 167, 69, 0.2);
+}
+
+#contato button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 15px rgba(33, 136, 56, 0.3);
+}
+.social-icons a:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
 @media (max-width: 767px) {
   header {
     height: 80vh;
@@ -103,6 +195,14 @@ header::before {
 
   #projetos .card-img-top {
     height: 150px;
+  }
+
+  #contato h2 {
+    font-size: 2rem;
+  }
+
+  #contato button {
+    width: 100%;
   }
 }
 
